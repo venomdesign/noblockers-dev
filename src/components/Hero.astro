@@ -1,0 +1,148 @@
+---
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          We Fix <span class="highlight">"Offshore"</span> 
+          <br />Codebase Disasters
+        </h1>
+        <p class="hero-description">
+          Codebase riddled with <code>ng-container</code> soup and force-pushed hotfixes? 
+          Still paying a dev shop that copy-pasted from Stack Overflow 6 years ago?
+        </p>
+        <div class="hero-features">
+          <div class="feature">✅ We'll fix it. Fast.</div>
+          <div class="feature">✅ Mock it publicly in our case studies.</div>
+          <div class="feature">✅ Because Honesty Isn't Agile.</div>
+        </div>
+        <div class="hero-actions">
+          <a href="mailto:audits@noblockers.dev" class="btn btn-primary">
+            Get an Audit
+          </a>
+          <a href="/memes" class="btn btn-outline">
+            View Memes
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/noblockers-header-banner.jpg" alt="No Blockers Banner" class="hero-img"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    color: var(--primary-color);
+    position: relative;
+  }
+
+  .hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .hero-description code {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .hero-features {
+    margin-bottom: 2.5rem;
+  }
+
+  .feature {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px 35px;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    padding: 13px 35px;
+  }
+
+  .btn-outline:hover {
+    background: white;
+    color: var(--text-color);
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 100px 0 60px;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+  }
+</style>

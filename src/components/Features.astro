@@ -1,0 +1,130 @@
+---
+const features = [
+  {
+    icon: "🔥",
+    title: "Code Audits",
+    description: "We'll tear apart your codebase and tell you exactly what's broken, who broke it, and how much it'll cost to fix."
+  },
+  {
+    icon: "💣",
+    title: "Offshore Disasters",
+    description: "Specializing in cleaning up the mess left behind by dev shops that disappeared faster than your budget."
+  },
+  {
+    icon: "🎯",
+    title: "Honest Reviews",
+    description: "No sugar-coating. No corporate speak. Just brutal honesty about your technical debt and architecture choices."
+  },
+  {
+    icon: "⚡",
+    title: "Fast Fixes",
+    description: "We've seen every horror story. We know exactly how to unfuck your codebase without starting from scratch."
+  },
+  {
+    icon: "📊",
+    title: "Public Shaming",
+    description: "Anonymous case studies that make your disasters famous. Because learning from failure should be public."
+  },
+  {
+    icon: "🛡️",
+    title: "Future-Proof",
+    description: "We don't just fix problems, we prevent them. No more copy-paste solutions from Stack Overflow circa 2017."
+  }
+];
+---
+
+<section class="features section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Everything you need to unfuck your codebase</h2>
+      <p>We come equipped with the tools and experience to handle any disaster your offshore team left behind.</p>
+    </div>
+    
+    <div class="features-grid">
+      {features.map((feature) => (
+        <div class="feature-card">
+          <div class="feature-icon">{feature.icon}</div>
+          <h3 class="feature-title">{feature.title}</h3>
+          <p class="feature-description">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    background: var(--bg-color);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+
+  .section-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+
+  .feature-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+      padding: 2rem;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

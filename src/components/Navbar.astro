@@ -1,0 +1,120 @@
+---
+---
+
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="/" class="logo">
+        🔥 <span>No Blockers™</span>
+      </a>
+      
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/roast" class="nav-link">Roast</a>
+        <a href="/confess" class="nav-link">Confess</a>
+        <a href="/memes" class="nav-link">Memes</a>
+        <a href="mailto:audits@noblockers.dev" class="btn btn-nav">Get Audit</a>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e1e5e9;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .logo span {
+    color: var(--text-color);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+
+  .btn-nav {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  // Add scroll effect to navbar
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  });
+</script>
