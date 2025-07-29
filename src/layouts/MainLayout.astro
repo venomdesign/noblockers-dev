@@ -1,4 +1,6 @@
 ---
+import '../assets/css/styles.css';
+
 export interface Props {
   title: string;
 }
@@ -23,11 +25,12 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --primary-color: #ff6b35;
-    --secondary-color: #2c3e50;
-    --text-color: #333;
-    --bg-color: #ffffff;
-    --section-bg: #f8f9fa;
+    --primary-color: #ffc107;
+    --secondary-color: #111;
+    --text-color: #fff;
+    --bg-color: #111;
+    --section-bg: #1a1a1a;
+    --card-bg: #222;
   }
 
   * {
@@ -64,13 +67,14 @@ const { title } = Astro.props;
   h1, h2, h3 {
     font-weight: 700;
     line-height: 1.2;
+    color: var(--text-color);
   }
 
   .btn {
     display: inline-block;
     padding: 12px 30px;
     background: var(--primary-color);
-    color: white;
+    color: #000;
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
@@ -78,7 +82,7 @@ const { title } = Astro.props;
   }
 
   .btn:hover {
-    background: #e55a2b;
+    background: #e6ac00;
     transform: translateY(-2px);
   }
 </style>
