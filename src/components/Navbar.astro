@@ -1,18 +1,19 @@
 ---
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <nav class="navbar">
   <div class="container">
     <div class="nav-wrapper">
-      <a href="/" class="logo">
+      <a href={baseUrl} class="logo">
         🔥 <span>No Blockers™</span>
       </a>
       
       <div class="nav-links">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/roast" class="nav-link">Roast</a>
-        <a href="/confess" class="nav-link">Confess</a>
-        <a href="/memes" class="nav-link">Memes</a>
+        <a href={baseUrl} class="nav-link">Home</a>
+        <a href={`${baseUrl}roast`} class="nav-link">Roast</a>
+        <a href={`${baseUrl}confess`} class="nav-link">Confess</a>
+        <a href={`${baseUrl}memes`} class="nav-link">Memes</a>
         <a href="mailto:audits@noblockers.dev" class="btn btn-nav">Get Audit</a>
       </div>
       
