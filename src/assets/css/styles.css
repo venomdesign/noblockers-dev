@@ -1,4 +1,13 @@
 
+:root {
+  --primary-color: #ffc107;
+  --secondary-color: #111;
+  --text-color: #fff;
+  --bg-color: #111;
+  --section-bg: #1a1a1a;
+  --card-bg: #222;
+}
+
 body {
   margin: 0;
   padding: 0;
