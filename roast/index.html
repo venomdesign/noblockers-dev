@@ -1,0 +1,28 @@
+<!DOCTYPE html><html> <head><title>Roast Generator | No Blockers™</title><link rel="stylesheet" href="/styles.css"><script type="text/javascript">
+      function getRoast() {
+        const roasts = {
+          "ng-container": [
+            "Wow, another ng-container—what are you nesting, shame?",
+            "ng-container isn’t a layout strategy, it’s a cry for help."
+          ],
+          "git": [
+            "Force-push to prod? You must be fun at parties.",
+            "Your Git history reads like a ransom note."
+          ],
+          "component": [
+            "Wrong component again? Why not just render a `<div>` and cry in it?",
+            "Using the wrong component because it has 'enabled'? You’ve enabled disappointment."
+          ]
+        };
+        const type = document.querySelector("select").value;
+        const list = roasts[type];
+        const roast = list[Math.floor(Math.random() * list.length)];
+        document.getElementById("output").innerText = roast;
+      }
+
+      function shareRoast() {
+        const text = document.getElementById("output").innerText;
+        navigator.clipboard.writeText(text);
+        alert("Roast copied to clipboard!");
+      }
+    </script></head> <body> <div class="container"> <h1>Roast Generator</h1> <select> <option value="ng-container">ng-container abuse</option> <option value="git">bad Git practices</option> <option value="component">wrong component</option> </select> <button onclick="getRoast()">Roast Me</button> <p id="output" class="roast-output"></p> <button onclick="shareRoast()">Copy Roast</button> </div> </body></html>
