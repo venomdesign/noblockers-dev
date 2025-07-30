@@ -7,24 +7,14 @@
   --card-bg: #222;
 }
 
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
   font-family: system-ui, sans-serif;
-  scroll-behavior: smooth;
-}
-
-body {
-  line-height: 1.6;
-  color: var(--text-color);
-  background: var(--bg-color);
+  background-color: #111;
+  color: #fff;
   text-align: center;
 }
-
 
 .hero-img {
   width: 100%;
@@ -32,22 +22,11 @@ body {
   display: block;
 }
 
-
-
 .container {
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 2rem;
 }
-
-.section {
-  padding: 80px 0;
-}
-
-.section:nth-child(even) {
-  background: var(--section-bg);
-}
-
 
 .logo {
   font-size: 1.75rem;
@@ -74,29 +53,4 @@ footer {
 
 main {
   padding-top: 80px;
-}
-
-
-h1,
-h2,
-h3 {
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--text-color);
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background: var(--primary-color);
-  color: #000;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #e6ac00;
-  transform: translateY(-2px);
 }
