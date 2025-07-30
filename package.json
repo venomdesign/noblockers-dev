@@ -2,13 +2,13 @@
   "name": "noblockers-dev",
   "type": "module",
   "version": "0.0.1",
-  "homepage": "https://venomdesign.github.io/noblockers-dev",
+  "homepage": "https://noblockers.dev",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "predeploy": "astro build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npx gh-pages -d dist"
   },
   "dependencies": {
     "astro": "^5.12.4"
